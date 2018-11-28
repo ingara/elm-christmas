@@ -1,6 +1,6 @@
 {
-  "name": "react-christmas",
-  "alias": "react-christmas",
-  "version": 2,
-  "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+    "name": "elm-christmas",
+    "alias": "elm-christmas",
+    "version": 2,
+    "builds": [{ "src": "next.config.js", "use": "@now/next" }]
 }

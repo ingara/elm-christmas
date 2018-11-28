@@ -3,13 +3,13 @@
 // what not here.
 
 export default {
-  name: 'react.christmas',
-  domain: 'https://react.christmas',
-  ogDescription: 'A nice little Christmas calendar for people who love React',
-  firstYearOfContent: 2017,
-  otherChristmasCalendars: [
-    'javascript.christmas',
-    'security.christmas',
-    'elm.christmas',
-  ]
+    name: 'elm.christmas',
+    domain: 'https://elm.christmas',
+    ogDescription: 'A nice little Christmas calendar for people who love Elm',
+    firstYearOfContent: 2018,
+    otherChristmasCalendars: [
+        'javascript.christmas',
+        'security.christmas',
+        'react.christmas',
+    ],
 };
