@@ -1,6 +1,5 @@
 {
     "name": "elm-christmas",
-    "alias": "elm-christmas",
-    "version": 2,
-    "builds": [{ "src": "next.config.js", "use": "@now/next" }]
+    "alias": ["elm-christmas", "www.elm.christmas"],
+    "version": 1
 }

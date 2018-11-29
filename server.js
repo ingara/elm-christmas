@@ -1,4 +1,5 @@
 const express = require('express');
+const helmet = require('helmet');
 const next = require('next');
 const compression = require('compression');
 
@@ -11,8 +12,14 @@ const runTheTrap = async () => {
     await app.prepare();
     const server = express();
 
+    // enable helmet to set security headers
+    server.use(helmet());
+
     // gzip it!
     server.use(compression());
+
+    // Pass static assets
+    server.use('/static', express.static('static'));
 
     // handle authors
     server.get('/author/:slug', (req, res) => {
@@ -26,6 +33,7 @@ const runTheTrap = async () => {
     server.get('/:year(\\d{4})', (req, res) => {
       const context = {
         year: req.params.year,
+        mode: req.query.mode,
       };
       app.render(req, res, '/year', context);
     });
@@ -35,6 +43,7 @@ const runTheTrap = async () => {
       const context = {
         year: req.params.year,
         date: req.params.date.padStart(2, '0'),
+        mode: req.query.mode,
       };
       app.render(req, res, '/post', context);
     });
