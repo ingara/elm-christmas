@@ -1,6 +1,6 @@
 {
   "name": "react-christmas",
-  "licence": "MIT",
+  "license": "MIT",
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
@@ -25,5 +25,8 @@
   },
   "devDependencies": {
     "markdown-with-front-matter-loader": "^0.1.0"
+  },
+  "resolutions": {
+    "ajv": "6.5.5"
   }
 }
